@@ -1,0 +1,88 @@
+/* vim: ts=2:sw=2:expandtab:foldmethod=marker
+
+  ===========================================================
+  |    Copyright © Stamoulohta (George Stamoulis) - 2018    |
+  |    All Rights Reserved.                                 |
+  |                                                         |
+  |    This file is part of the px8 web application.        |
+  ===========================================================-->
+
+ver: 0.a.1
+ */
+
+/*      FORM {{{ */
+
+form {
+  width: 90%;
+  margin: 0 auto;
+  font-size:1.5em;
+  color:#FFFFAA;
+  text-shadow:2px 2px 4px black;
+}
+
+label, input {
+  display: inline-block; /* in order to define widths */
+}
+
+label {
+  /* positions the label text beside the input */
+  width: 30%;
+  text-align: right;
+}
+
+label + input {
+  width: 30%;
+  /* large margin-right to force the next element to the new-line
+  and margin-left to create a gutter between the label and input */
+margin: 0 30% 0 4%;
+}
+
+input + input {
+  /* only the submit button is matched by this selector,
+  but to be sure you could use an id or class for that button */
+float: right;
+}
+/*      }}} */
+
+html{
+  background-color:lemonChiffon;
+}
+
+#sidebar{
+  position:absolute;
+  z-index:1;
+  width:20%;
+  top:1rem;
+  left:-20%;
+  height:calc(100% - 2rem);
+  background-color:teal;
+  -webkit-transition:left 1s; /* Safari */
+  transition:left 1s;
+  box-shadow:4px 4px 10px black;
+}
+
+#handle{
+  position:relative;
+  float:left;
+  border:none;
+  background-color:transparent;
+  font-size:2rem;
+  color:#FFFFAA;
+  text-shadow:2px 2px 4px black;
+}
+
+#handle::-moz-focus-inner {border:0;}
+
+#header{
+  position:relative;
+  height:3rem;
+  left:1rem;
+  top:0.5rem;
+  width:calc(100% - 2rem);
+  background-color:teal;
+  box-shadow:5px 5px 8px grey;
+}
+
+#controls{
+  margin:4rem 0 0 1rem;
+}
