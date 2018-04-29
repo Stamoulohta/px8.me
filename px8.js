@@ -11,20 +11,18 @@
 */
 
 window.onload = function(){
-    handle = document.getElementById('handle');
+    handles = document.getElementsByClassName('sb_handle');
     sidebar = document.getElementById('sidebar');
     header = document.getElementById('header');
-    handle.onclick = toggle_bar;
+    Array.prototype.forEach.call(handles, function(handle) {
+        handle.onclick = toggle_bar;
+    });
 }
 
 function toggle_bar(){
-    if("HEADER" == handle.parentElement.nodeName){
-        sidebar.style.left='1rem';
-        sidebar.insertBefore(handle, sidebar.childNodes[0]);
-        handle.style.float='right';
+    if(sidebar.style.left == '1rem'){
+        sidebar.style.left = '-20%';
     }else{
-        header.appendChild(handle);
-        handle.style.float='left';
-        sidebar.style.left='-20%';
+        sidebar.style.left = '1rem';
     }
 }
