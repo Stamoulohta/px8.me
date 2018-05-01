@@ -21,14 +21,65 @@
     <!-- {{{ SIDEBAR -->
     <div id="sidebar">
       <button class="sb_handle fl-right">☰</button>
-      <form id="controls" action="#" method="get" accept-charset="utf-8">
-        <label for="width">width:<input id="width" type="number" name="width"/></label><br/>
-        <label for="height">height:<input id="height" type="number" name="height"/></label>
-        <br/>
-        <input type="button" name="button" value="the value">
-        <input type="submit" value="Continue &rarr;">
-      </form>
-    </div>
+      <div class="settings">
+        <div class="setting">
+          <h4>border</h4>
+          <div class="value">
+            <label for="ver-border">vertical
+              <input id="ver-border" type="number" min="0" max="10" step="1"/>
+            </label>
+            <br/>
+            <label for="hor-border">horizontal
+              <input id="hor-border" type="number" min="0" max="10" step="1"/>
+            </label>
+          </div>
+        </div>
+        <div class="setting">
+          <h4>mode</h4>
+          <div class="value">
+            <label for="mode">bit
+              <select id="mode">
+                <option value="1" >1  (mono)</option>
+                <option value="8" >8  (256) </option>
+                <option value="16">16 (65535)</option>
+                <option value="24">24 (16777215)</option>
+                <option value="32">32 (4294967295)</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="setting">
+          <h4>dimentions</h4>
+          <div class="value">
+            <label for="width">width
+              <input id="width" type="number" min="1" max="64" step="1"/>
+            </label>
+            <br/>
+            <label for="height">height
+              <input id="height" type="number" min="1" max="64" step="1"/>
+            </label>
+          </div>
+        </div>
+        <div class="setting">
+          <h4>export</h4>
+            <div class="value">
+              <select>
+                <option value="css">css</option>
+                <option value="svg">svg</option>
+                <option disabled value="jpg">jpg</option>
+                <option disabled value="png">png</option>
+              </select>
+            </div>
+        </div>
+        <div class="setting">
+          <h4>source</h4>
+          <div class="value">
+            <a href="view-source:#">browser</a>
+            <a href="https://github.com/Stamoulohta/px8.me">github</a>
+          </div>
+        </div>
+      </div><!-- .settings -->
+    </div><!-- #sidebar -->
     <!-- }}} -->
     <!-- {{{ CONTENT -->
     <div class="content">

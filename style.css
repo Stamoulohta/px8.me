@@ -39,36 +39,7 @@ progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type=
 }
 /*      }}} */
 /*      FORM    {{{ */
-form {
-  width: 90%;
-  margin: 0 auto;
-  font-size:1.5em;
-  color:#FFFFAA;
-  text-shadow:2px 2px 4px black;
-}
 
-label, input {
-  display: inline-block; /* in order to define widths */
-}
-
-label {
-  /* positions the label text beside the input */
-  width: 30%;
-  text-align: right;
-}
-
-label + input {
-  width: 30%;
-  /* large margin-right to force the next element to the new-line
-  and margin-left to create a gutter between the label and input */
-margin: 0 30% 0 4%;
-}
-
-input + input {
-  /* only the submit button is matched by this selector,
-  but to be sure you could use an id or class for that button */
-float: right;
-}
 /*      }}} */
 
 html{
@@ -88,7 +59,7 @@ html{
   z-index:1;
   width:20%;
   top:1rem;
-  left:-20%;
+  /*left:-20%;*/
   height:calc(100% - 2rem);
   background-color:teal;
   -webkit-transition:left 1s; /* Safari */
@@ -106,6 +77,49 @@ html{
 }
 
 .sb_handle::-moz-focus-inner {border:0;}
+
+.settings{
+  clear:both;
+  margin-top:4rem;
+  height:calc(100% - 4rem);
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+.setting > h4{
+  text-align:center;
+  font-size:1.5rem;
+  margin:0.5em 0;
+  color:#FFFFAA;
+  text-shadow: 1px 1px 2px yellow;
+}
+
+label, input, select, .value > a {
+  display: inline-block; /* in order to define widths */
+  height:2rem;
+  margin:0 1em;
+}
+
+label {
+  /* positions the label text beside the input */
+  width:30%;
+  text-align:right;
+}
+
+label:not(:first-of-type){
+  margin-top:1rem;
+}
+
+input, select {
+  width:4rem;
+}
+
+label + input, label + select {
+  /*width: 30%;*/
+  /* large margin-right to force the next element to the new-line
+  and margin-left to create a gutter between the label and input */
+/*margin: 0 30% 0 4%;*/
+}
 
 #header{
   position:relative;
