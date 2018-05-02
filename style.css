@@ -40,7 +40,6 @@ progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type=
 /*      }}} */
 /*      FORM    {{{ */
 
-/*      }}} */
 
 html{
   background-color:lemonChiffon;
@@ -53,6 +52,8 @@ html{
 .fl-left{
   float:left;
 }
+
+/*      SIDEBAR     {{{ */
 
 #sidebar{
   position:absolute;
@@ -121,6 +122,9 @@ label + input, label + select {
 /*margin: 0 30% 0 4%;*/
 }
 
+/*      }}} */
+/*      HEADER      {{{ */
+
 #header{
   position:relative;
   height:6rem;
@@ -139,6 +143,9 @@ label + input, label + select {
   margin:0;
   text-shadow: 2px 2px 4px yellow;
 }
+
+/*      }}} */
+
 
 #controls{
   margin:4rem 0 0 1rem;
